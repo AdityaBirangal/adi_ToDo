@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:adi_todo/widgets/taskView.dart';
 import 'package:adi_todo/screen/addTaskScreen.dart';
+import 'package:adi_todo/module/task.dart';
+import 'package:provider/provider.dart';
+import 'package:adi_todo/module/taskData.dart';
 
 class TaskScreen extends StatelessWidget {
   @override
@@ -47,7 +50,7 @@ class TaskScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    '5 Tasks',
+                    '${Provider.of<TaskData>(context).taskCount} Tasks',
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ],

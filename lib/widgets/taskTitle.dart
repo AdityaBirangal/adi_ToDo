@@ -4,7 +4,12 @@ class TaskTitle extends StatelessWidget {
   final String taskTitle;
   final bool isChecked;
   final Function toggleCheckBoxState;
-  TaskTitle({this.taskTitle, this.isChecked, this.toggleCheckBoxState});
+  final Function deleteTask;
+  TaskTitle(
+      {this.taskTitle,
+      this.isChecked,
+      this.toggleCheckBoxState,
+      this.deleteTask});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +24,7 @@ class TaskTitle extends StatelessWidget {
         value: isChecked,
         onChanged: toggleCheckBoxState,
       ),
+      onLongPress: deleteTask,
     );
   }
 }

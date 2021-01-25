@@ -8,7 +8,6 @@ class TaskData extends ChangeNotifier {
   List<Task> _tasks = [
     Task(taskTitle: 'One'),
     Task(taskTitle: 'Two'),
-    Task(taskTitle: 'three'),
   ];
 
   int get taskCount {
